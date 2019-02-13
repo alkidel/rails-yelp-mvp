@@ -1,0 +1,19 @@
+<div class="container text-center" >
+<h1>All Reviews</h1>
+
+<div>
+<% @reviews.each do |review| %>
+  <h3><%= review.content%></h3>
+<% end %>
+</div>
+
+  <div class="text-center"><h2>
+    <%= link_to "Create a new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %></h2>
+  </div>
+
+  <div class="text-center"><h2>
+      <%= link_to "Back to list of restaurants", restaurants_path, class: "btn btn-primary" %></h2>
+  </div>
+
+
+</div>
